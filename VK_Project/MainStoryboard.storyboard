@@ -227,6 +227,29 @@
                                     <constraint firstAttribute="height" constant="1" id="Kqy-f2-f7i"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZQu-QC-JJg">
+                                <rect key="frame" x="8" y="511" width="398" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="I97-CC-xPn"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HqM-9a-mfg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lOm-KD-bLq">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j3u-0h-N2W">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lBL-XM-KKx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -234,6 +257,7 @@
                             <constraint firstItem="ROc-Dp-VVh" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="68i-pJ-SxH"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="kIU-iu-AdM" secondAttribute="trailing" id="8Hr-kK-V4K"/>
                             <constraint firstItem="XbK-H0-J9W" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="9nR-wM-Ipq"/>
+                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="top" secondItem="ROc-Dp-VVh" secondAttribute="bottom" constant="8" id="C8i-WA-3Hj"/>
                             <constraint firstItem="lfa-r4-9PY" firstAttribute="leading" secondItem="XbK-H0-J9W" secondAttribute="trailing" constant="16" id="CcK-fc-aS5"/>
                             <constraint firstItem="ILF-NC-vEs" firstAttribute="leading" secondItem="XbK-H0-J9W" secondAttribute="trailing" constant="16" id="HOJ-e8-lTq"/>
                             <constraint firstItem="11O-mN-bQj" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="K6c-xo-2d5"/>
@@ -244,6 +268,8 @@
                             <constraint firstItem="RfO-0r-k6w" firstAttribute="leading" secondItem="XbK-H0-J9W" secondAttribute="trailing" constant="16" id="RFQ-Dl-Cqs"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ILF-NC-vEs" secondAttribute="trailing" id="SUi-OP-zau"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lfa-r4-9PY" secondAttribute="trailing" id="T0S-Zh-N7n"/>
+                            <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="ZQu-QC-JJg" secondAttribute="trailing" constant="8" id="TZ0-67-xNI"/>
+                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="Xq0-1a-HXk"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RfO-0r-k6w" secondAttribute="trailing" id="YXy-Pv-WWM"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="11O-mN-bQj" secondAttribute="trailing" constant="8" id="Ys0-DR-8QG"/>
                             <constraint firstItem="lfa-r4-9PY" firstAttribute="top" secondItem="ILF-NC-vEs" secondAttribute="bottom" constant="8" id="hi1-uY-mkx"/>
