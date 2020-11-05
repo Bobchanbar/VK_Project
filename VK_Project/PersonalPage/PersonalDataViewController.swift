@@ -58,6 +58,7 @@ class PersonalDataViewController: UIViewController {
         collectionView.backgroundColor = UIColor (red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
         
         friends = FakeAPI.shared.getFriendsList()
+        friendsCollectionView.backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
         friendsCollectionView.delegate = self
         friendsCollectionView.dataSource = self
         friendsCollectionView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellWithReuseIdentifier: "FriendsCell")
@@ -142,6 +143,7 @@ extension PersonalDataViewController: UICollectionViewDelegate, UICollectionView
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendsCell", for: indexPath) as? FriendsCell else {
                 fatalError()
             }
+            cell.backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
             cell.friendsName.text = friends [indexPath.row] .name
             cell.friendsPhoto.image = UIImage (named: friends [indexPath.row].imageName)
             cell.friendsPhoto.layer.masksToBounds = true
