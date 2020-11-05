@@ -18,9 +18,14 @@ class PersonalDataViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
+  
+    @IBOutlet weak var friendsButton: UIButton!
+    @IBOutlet weak var friendsCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        friendsCount.translatesAutoresizingMaskIntoConstraints = false
         
         photo.layer.masksToBounds = true
         photo.layer.cornerRadius = 100/2
@@ -47,7 +52,18 @@ class PersonalDataViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.backgroundColor = UIColor (red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
- 
+        
+        friendsCount.font = .systemFont(ofSize: 12)
+        friendsCount.textColor = .lightGray
+        friendsCount.text = "\(FakeAPI.shared.getFriendsCount())"
+        friendsButton.contentHorizontalAlignment = .left
+        guard let buttonTitle = friendsButton.titleLabel else {
+            return
+        }
+        NSLayoutConstraint.activate([
+            friendsCount.centerYAnchor.constraint(equalTo: buttonTitle.centerYAnchor),
+            friendsCount.leadingAnchor.constraint(equalTo: buttonTitle.trailingAnchor, constant: 8)
+        ])
     }
 }
 extension PersonalDataViewController: UITableViewDataSource, UITableViewDelegate {

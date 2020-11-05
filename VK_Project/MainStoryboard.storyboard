@@ -164,8 +164,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vladimir Barus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILF-NC-vEs">
-                                <rect key="frame" x="124" y="72" width="110" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="124" y="72" width="116" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -227,11 +227,18 @@
                                     <constraint firstAttribute="height" constant="1" id="Kqy-f2-f7i"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29J-dA-vKx">
+                                <rect key="frame" x="271" y="511" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZQu-QC-JJg">
-                                <rect key="frame" x="8" y="511" width="398" height="100"/>
+                                <rect key="frame" x="8" y="549" width="398" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="I97-CC-xPn"/>
+                                    <constraint firstAttribute="height" constant="100" id="Q7M-of-f2d"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HqM-9a-mfg">
                                     <size key="itemSize" width="128" height="128"/>
@@ -250,15 +257,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bq-7v-qTz">
+                                <rect key="frame" x="8" y="511" width="398" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="q6u-7Z-TpH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="FRIENDS ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lBL-XM-KKx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="ZQu-QC-JJg" secondAttribute="trailing" constant="8" id="2Em-bk-nhC"/>
                             <constraint firstItem="ROc-Dp-VVh" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="68i-pJ-SxH"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="kIU-iu-AdM" secondAttribute="trailing" id="8Hr-kK-V4K"/>
                             <constraint firstItem="XbK-H0-J9W" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="9nR-wM-Ipq"/>
-                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="top" secondItem="ROc-Dp-VVh" secondAttribute="bottom" constant="8" id="C8i-WA-3Hj"/>
                             <constraint firstItem="lfa-r4-9PY" firstAttribute="leading" secondItem="XbK-H0-J9W" secondAttribute="trailing" constant="16" id="CcK-fc-aS5"/>
+                            <constraint firstItem="5Bq-7v-qTz" firstAttribute="top" secondItem="ROc-Dp-VVh" secondAttribute="bottom" constant="8" id="G7o-na-uCn"/>
                             <constraint firstItem="ILF-NC-vEs" firstAttribute="leading" secondItem="XbK-H0-J9W" secondAttribute="trailing" constant="16" id="HOJ-e8-lTq"/>
                             <constraint firstItem="11O-mN-bQj" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="K6c-xo-2d5"/>
                             <constraint firstItem="9l1-XI-q9w" firstAttribute="top" secondItem="11O-mN-bQj" secondAttribute="bottom" constant="8" id="Ktt-2V-doq"/>
@@ -268,17 +286,19 @@
                             <constraint firstItem="RfO-0r-k6w" firstAttribute="leading" secondItem="XbK-H0-J9W" secondAttribute="trailing" constant="16" id="RFQ-Dl-Cqs"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ILF-NC-vEs" secondAttribute="trailing" id="SUi-OP-zau"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lfa-r4-9PY" secondAttribute="trailing" id="T0S-Zh-N7n"/>
-                            <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="ZQu-QC-JJg" secondAttribute="trailing" constant="8" id="TZ0-67-xNI"/>
-                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="Xq0-1a-HXk"/>
+                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="Vts-9j-EqM"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RfO-0r-k6w" secondAttribute="trailing" id="YXy-Pv-WWM"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="11O-mN-bQj" secondAttribute="trailing" constant="8" id="Ys0-DR-8QG"/>
+                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="top" secondItem="5Bq-7v-qTz" secondAttribute="bottom" constant="8" id="fAL-b9-NVJ"/>
                             <constraint firstItem="lfa-r4-9PY" firstAttribute="top" secondItem="ILF-NC-vEs" secondAttribute="bottom" constant="8" id="hi1-uY-mkx"/>
                             <constraint firstItem="NCl-Vv-tdI" firstAttribute="top" secondItem="XbK-H0-J9W" secondAttribute="bottom" constant="16" id="jy0-QZ-6dp"/>
                             <constraint firstItem="9l1-XI-q9w" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" id="lmt-2N-zP6"/>
                             <constraint firstItem="XbK-H0-J9W" firstAttribute="top" secondItem="lBL-XM-KKx" secondAttribute="top" constant="8" id="mDX-YC-U5d"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="ROc-Dp-VVh" secondAttribute="trailing" constant="8" id="nkv-0P-n7z"/>
+                            <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="5Bq-7v-qTz" secondAttribute="trailing" constant="8" id="ocp-P8-yQn"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="NCl-Vv-tdI" secondAttribute="trailing" constant="8" id="pos-Qi-IKe"/>
                             <constraint firstItem="NCl-Vv-tdI" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="q1i-q9-MAI"/>
+                            <constraint firstItem="5Bq-7v-qTz" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="tq1-ag-Lck"/>
                             <constraint firstItem="RfO-0r-k6w" firstAttribute="top" secondItem="lfa-r4-9PY" secondAttribute="bottom" constant="8" id="u2n-l7-WlN"/>
                             <constraint firstItem="kIU-iu-AdM" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" id="ySK-zU-d0p"/>
                             <constraint firstItem="ILF-NC-vEs" firstAttribute="top" secondItem="lBL-XM-KKx" secondAttribute="top" constant="16" id="z18-Yx-a6b"/>
@@ -290,6 +310,8 @@
                         <outlet property="addInfo" destination="lfa-r4-9PY" id="9wv-RO-qWn"/>
                         <outlet property="collectionView" destination="kIU-iu-AdM" id="XUw-8J-2mf"/>
                         <outlet property="editButton" destination="NCl-Vv-tdI" id="HNS-Hh-ch9"/>
+                        <outlet property="friendsButton" destination="5Bq-7v-qTz" id="Whj-px-qR6"/>
+                        <outlet property="friendsCount" destination="29J-dA-vKx" id="xu2-Jl-EDT"/>
                         <outlet property="name" destination="ILF-NC-vEs" id="cc8-ET-LSu"/>
                         <outlet property="photo" destination="XbK-H0-J9W" id="wj2-d1-yrD"/>
                         <outlet property="status" destination="RfO-0r-k6w" id="fcV-XZ-hez"/>

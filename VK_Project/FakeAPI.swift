@@ -22,5 +22,8 @@ class FakeAPI {
     func getStatus() -> String {
         return "online"
     }
+    func getFriendsCount() -> Int {
+        return 100
+    }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8901EA5E255461040091F717 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901EA5C255461030091F717 /* FriendsCell.swift */; };
+		8901EA5F255461040091F717 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8901EA5D255461030091F717 /* FriendsCell.xib */; };
 		8911DF40254ED5CB00CFBD76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8911DF3F254ED5CB00CFBD76 /* ViewController.swift */; };
 		89266EDF2552F8B10038BD52 /* PersonalDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */; };
 		89266EE02552F8B10038BD52 /* PersonalDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8901EA5C255461030091F717 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		8901EA5D255461030091F717 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		8911DF3F254ED5CB00CFBD76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataTableViewCell.swift; sourceTree = "<group>"; };
 		89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDataTableViewCell.xib; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */,
 				89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */,
 				895DA19125530DFD00245209 /* ActionViewCell.swift */,
+				8901EA5C255461030091F717 /* FriendsCell.swift */,
+				8901EA5D255461030091F717 /* FriendsCell.xib */,
 				895DA19225530DFD00245209 /* ActionViewCell.xib */,
 				895DA18C2553061B00245209 /* FakeAPI.swift */,
 				898BB73C254C715F00238C49 /* VK_Project.xcdatamodeld */,
@@ -257,6 +263,7 @@
 				898BB740254C716000238C49 /* Assets.xcassets in Resources */,
 				89266EE02552F8B10038BD52 /* PersonalDataTableViewCell.xib in Resources */,
 				895DA19425530DFD00245209 /* ActionViewCell.xib in Resources */,
+				8901EA5F255461040091F717 /* FriendsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				895DA19325530DFD00245209 /* ActionViewCell.swift in Sources */,
+				8901EA5E255461040091F717 /* FriendsCell.swift in Sources */,
 				89B2934C2551B606002F8677 /* PersonalDataViewController.swift in Sources */,
 				898BB734254C715F00238C49 /* AppDelegate.swift in Sources */,
 				898BB73E254C715F00238C49 /* VK_Project.xcdatamodeld in Sources */,
