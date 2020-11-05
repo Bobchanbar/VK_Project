@@ -94,6 +94,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8901EA632554616D0091F717 /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				8911DF3F254ED5CB00CFBD76 /* ViewController.swift */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		8901EA64255461920091F717 /* PersonalPage */ = {
+			isa = PBXGroup;
+			children = (
+				895DA19225530DFD00245209 /* ActionViewCell.xib */,
+				8901EA5D255461030091F717 /* FriendsCell.xib */,
+				8901EA5C255461030091F717 /* FriendsCell.swift */,
+				895DA19125530DFD00245209 /* ActionViewCell.swift */,
+				89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */,
+				89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */,
+				89B2934B2551B606002F8677 /* PersonalDataViewController.swift */,
+			);
+			path = PersonalPage;
+			sourceTree = "<group>";
+		};
+		8901EA65255461FA0091F717 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				898BB735254C715F00238C49 /* SceneDelegate.swift */,
+				895DA18C2553061B00245209 /* FakeAPI.swift */,
+				898BB733254C715F00238C49 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8901EA66255462240091F717 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				898BB73F254C716000238C49 /* Assets.xcassets */,
+				898BB741254C716000238C49 /* LaunchScreen.storyboard */,
+				898BB77F254C743600238C49 /* MainStoryboard.storyboard */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
 		898BB727254C715F00238C49 = {
 			isa = PBXGroup;
 			children = (
@@ -117,21 +159,11 @@
 		898BB732254C715F00238C49 /* VK_Project */ = {
 			isa = PBXGroup;
 			children = (
-				898BB733254C715F00238C49 /* AppDelegate.swift */,
-				8911DF3F254ED5CB00CFBD76 /* ViewController.swift */,
-				898BB735254C715F00238C49 /* SceneDelegate.swift */,
-				898BB77F254C743600238C49 /* MainStoryboard.storyboard */,
-				898BB73F254C716000238C49 /* Assets.xcassets */,
-				898BB741254C716000238C49 /* LaunchScreen.storyboard */,
-				89B2934B2551B606002F8677 /* PersonalDataViewController.swift */,
+				8901EA66255462240091F717 /* Resourses */,
+				8901EA65255461FA0091F717 /* App */,
+				8901EA64255461920091F717 /* PersonalPage */,
+				8901EA632554616D0091F717 /* StartView */,
 				898BB744254C716000238C49 /* Info.plist */,
-				89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */,
-				89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */,
-				895DA19125530DFD00245209 /* ActionViewCell.swift */,
-				8901EA5C255461030091F717 /* FriendsCell.swift */,
-				8901EA5D255461030091F717 /* FriendsCell.xib */,
-				895DA19225530DFD00245209 /* ActionViewCell.xib */,
-				895DA18C2553061B00245209 /* FakeAPI.swift */,
 				898BB73C254C715F00238C49 /* VK_Project.xcdatamodeld */,
 			);
 			path = VK_Project;
