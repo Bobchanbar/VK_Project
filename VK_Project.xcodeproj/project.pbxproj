@@ -24,6 +24,7 @@
 		898BB759254C716000238C49 /* VK_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BB758254C716000238C49 /* VK_ProjectUITests.swift */; };
 		898BB780254C743600238C49 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898BB77F254C743600238C49 /* MainStoryboard.storyboard */; };
 		89B2934C2551B606002F8677 /* PersonalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B2934B2551B606002F8677 /* PersonalDataViewController.swift */; };
+		89D2657D25548D6D00532097 /* FriendsCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2657C25548D6D00532097 /* FriendsCollectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		898BB75A254C716000238C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898BB77F254C743600238C49 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		89B2934B2551B606002F8677 /* PersonalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewController.swift; sourceTree = "<group>"; };
+		89D2657C25548D6D00532097 /* FriendsCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				895DA19125530DFD00245209 /* ActionViewCell.swift */,
 				89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */,
 				89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */,
+				89D2657C25548D6D00532097 /* FriendsCollectionModel.swift */,
 				89B2934B2551B606002F8677 /* PersonalDataViewController.swift */,
 			);
 			path = PersonalPage;
@@ -325,6 +328,7 @@
 				89B2934C2551B606002F8677 /* PersonalDataViewController.swift in Sources */,
 				898BB734254C715F00238C49 /* AppDelegate.swift in Sources */,
 				898BB73E254C715F00238C49 /* VK_Project.xcdatamodeld in Sources */,
+				89D2657D25548D6D00532097 /* FriendsCollectionModel.swift in Sources */,
 				89266EDF2552F8B10038BD52 /* PersonalDataTableViewCell.swift in Sources */,
 				8911DF40254ED5CB00CFBD76 /* ViewController.swift in Sources */,
 				898BB736254C715F00238C49 /* SceneDelegate.swift in Sources */,

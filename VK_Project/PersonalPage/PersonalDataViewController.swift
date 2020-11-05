@@ -22,6 +22,10 @@ class PersonalDataViewController: UIViewController {
     @IBOutlet weak var friendsButton: UIButton!
     @IBOutlet weak var friendsCount: UILabel!
     
+    @IBOutlet weak var friendsCollectionView: UICollectionView!
+    
+    var friends: [FriendsCollectionModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +56,11 @@ class PersonalDataViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.backgroundColor = UIColor (red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
+        
+        friends = FakeAPI.shared.getFriendsList()
+        friendsCollectionView.delegate = self
+        friendsCollectionView.dataSource = self
+        friendsCollectionView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellWithReuseIdentifier: "FriendsCell")
         
         friendsCount.font = .systemFont(ofSize: 12)
         friendsCount.textColor = .lightGray
@@ -106,39 +115,75 @@ extension PersonalDataViewController: UITableViewDataSource, UITableViewDelegate
 
 extension PersonalDataViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "actionCell", for: indexPath)
-            as? ActionViewCell else {
-            fatalError()
-        }
-        switch indexPath.row {
-        case 0:
-            cell.toolBarLabel.text = "Story"
-            cell.toolBarImage.image = UIImage (named: "photo")
-        case 1:
-            cell.toolBarLabel.text = "Post"
-            cell.toolBarImage.image = UIImage (named: "posts")
-        case 2:
-            cell.toolBarLabel.text = "Photo"
-            cell.toolBarImage.image = UIImage (named: "photoIcon")
-        case 3:
-            cell.toolBarLabel.text = "Clip"
-            cell.toolBarImage.image = UIImage (named: "clip")
+        
+        switch collectionView {
+        case self.collectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "actionCell", for: indexPath)
+                as? ActionViewCell else {
+                fatalError()
+            }
+            switch indexPath.row {
+            case 0:
+                cell.toolBarLabel.text = "Story"
+                cell.toolBarImage.image = UIImage (named: "photo")
+            case 1:
+                cell.toolBarLabel.text = "Post"
+                cell.toolBarImage.image = UIImage (named: "posts")
+            case 2:
+                cell.toolBarLabel.text = "Photo"
+                cell.toolBarImage.image = UIImage (named: "photoIcon")
+            case 3:
+                cell.toolBarLabel.text = "Clip"
+                cell.toolBarImage.image = UIImage (named: "clip")
+            default: fatalError()
+            }
+            return cell
+        case self.friendsCollectionView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendsCell", for: indexPath) as? FriendsCell else {
+                fatalError()
+            }
+            cell.friendsName.text = friends [indexPath.row] .name
+            cell.friendsPhoto.image = UIImage (named: friends [indexPath.row].imageName)
+            cell.friendsPhoto.layer.masksToBounds = true
+            cell.friendsPhoto.layer.cornerRadius = 70/2
+            return cell
+            
         default: fatalError()
         }
-        return cell
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        switch collectionView {
+        case self.collectionView:
+            return 4
+        case self.friendsCollectionView:
+            return friends.count
+        default: fatalError()
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let totalCellWidth = 70*4
-        let totalSpaceWidth = 20*(4-1)
-        let leftInset = (UIScreen.main.bounds.width - CGFloat(totalCellWidth + totalSpaceWidth))/2
-        let rightInset = leftInset
-        return UIEdgeInsets (top: 0, left: leftInset, bottom: 0, right: rightInset)
+        switch collectionView {
+        case self.collectionView:
+            let totalCellWidth = 70 * 4
+            let totalSpaceWidth = 20 * (4-1)
+            let leftInset = (UIScreen.main.bounds.width - CGFloat(totalCellWidth + totalSpaceWidth))/2
+            let rightInset = leftInset
+            return UIEdgeInsets (top: 0, left: leftInset, bottom: 0, right: rightInset)
+        case self.friendsCollectionView:
+            return UIEdgeInsets (top: 0, left: 0, bottom: 0, right: 0)
+        default:
+            fatalError()
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize (width: 70, height: 70)
+        switch collectionView {
+        case self.collectionView:
+            return CGSize (width: 70, height: 70)
+        case self.friendsCollectionView:
+            return CGSize (width: 70, height: 100)
+        default:
+            fatalError()
+        }
     }
+    
 }
 

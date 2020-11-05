@@ -234,24 +234,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZQu-QC-JJg">
-                                <rect key="frame" x="8" y="549" width="398" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZQu-QC-JJg">
+                                <rect key="frame" x="0.0" y="549" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Q7M-of-f2d"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HqM-9a-mfg">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HqM-9a-mfg">
+                                    <size key="itemSize" width="70" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lOm-KD-bLq">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j3u-0h-N2W">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
@@ -269,9 +269,9 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lBL-XM-KKx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="ZQu-QC-JJg" secondAttribute="trailing" constant="8" id="2Em-bk-nhC"/>
+                            <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="ZQu-QC-JJg" secondAttribute="trailing" id="2Em-bk-nhC"/>
                             <constraint firstItem="ROc-Dp-VVh" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="68i-pJ-SxH"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="kIU-iu-AdM" secondAttribute="trailing" id="8Hr-kK-V4K"/>
                             <constraint firstItem="XbK-H0-J9W" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="9nR-wM-Ipq"/>
@@ -286,7 +286,7 @@
                             <constraint firstItem="RfO-0r-k6w" firstAttribute="leading" secondItem="XbK-H0-J9W" secondAttribute="trailing" constant="16" id="RFQ-Dl-Cqs"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ILF-NC-vEs" secondAttribute="trailing" id="SUi-OP-zau"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lfa-r4-9PY" secondAttribute="trailing" id="T0S-Zh-N7n"/>
-                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" constant="8" id="Vts-9j-EqM"/>
+                            <constraint firstItem="ZQu-QC-JJg" firstAttribute="leading" secondItem="lBL-XM-KKx" secondAttribute="leading" id="Vts-9j-EqM"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RfO-0r-k6w" secondAttribute="trailing" id="YXy-Pv-WWM"/>
                             <constraint firstItem="lBL-XM-KKx" firstAttribute="trailing" secondItem="11O-mN-bQj" secondAttribute="trailing" constant="8" id="Ys0-DR-8QG"/>
                             <constraint firstItem="ZQu-QC-JJg" firstAttribute="top" secondItem="5Bq-7v-qTz" secondAttribute="bottom" constant="8" id="fAL-b9-NVJ"/>
@@ -311,6 +311,7 @@
                         <outlet property="collectionView" destination="kIU-iu-AdM" id="XUw-8J-2mf"/>
                         <outlet property="editButton" destination="NCl-Vv-tdI" id="HNS-Hh-ch9"/>
                         <outlet property="friendsButton" destination="5Bq-7v-qTz" id="Whj-px-qR6"/>
+                        <outlet property="friendsCollectionView" destination="ZQu-QC-JJg" id="ISk-CL-m9c"/>
                         <outlet property="friendsCount" destination="29J-dA-vKx" id="xu2-Jl-EDT"/>
                         <outlet property="name" destination="ILF-NC-vEs" id="cc8-ET-LSu"/>
                         <outlet property="photo" destination="XbK-H0-J9W" id="wj2-d1-yrD"/>

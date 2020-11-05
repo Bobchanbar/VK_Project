@@ -25,5 +25,18 @@ class FakeAPI {
     func getFriendsCount() -> Int {
         return 100
     }
+    func getFriendsList() -> [FriendsCollectionModel] {
+        let friends = [
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto")
+        ]
+        return friends
+    }
 }
 
