@@ -12,6 +12,10 @@
 		8911DF40254ED5CB00CFBD76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8911DF3F254ED5CB00CFBD76 /* ViewController.swift */; };
 		89266EDF2552F8B10038BD52 /* PersonalDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */; };
 		89266EE02552F8B10038BD52 /* PersonalDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */; };
+		89407E1D255567EA002C45CB /* FriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89407E1C255567EA002C45CB /* FriendListController.swift */; };
+		89407E232555683B002C45CB /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89407E212555683B002C45CB /* FriendListCell.swift */; };
+		89407E242555683B002C45CB /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89407E222555683B002C45CB /* FriendListCell.xib */; };
+		89407E2D2555B1C9002C45CB /* FriendPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89407E2C2555B1C9002C45CB /* FriendPageController.swift */; };
 		895DA18D2553061B00245209 /* FakeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895DA18C2553061B00245209 /* FakeAPI.swift */; };
 		895DA19325530DFD00245209 /* ActionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895DA19125530DFD00245209 /* ActionViewCell.swift */; };
 		895DA19425530DFD00245209 /* ActionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895DA19225530DFD00245209 /* ActionViewCell.xib */; };
@@ -50,6 +54,10 @@
 		8911DF3F254ED5CB00CFBD76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89266EDD2552F8B10038BD52 /* PersonalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataTableViewCell.swift; sourceTree = "<group>"; };
 		89266EDE2552F8B10038BD52 /* PersonalDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDataTableViewCell.xib; sourceTree = "<group>"; };
+		89407E1C255567EA002C45CB /* FriendListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListController.swift; sourceTree = "<group>"; };
+		89407E212555683B002C45CB /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		89407E222555683B002C45CB /* FriendListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
+		89407E2C2555B1C9002C45CB /* FriendPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPageController.swift; sourceTree = "<group>"; };
 		895DA18C2553061B00245209 /* FakeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPI.swift; sourceTree = "<group>"; };
 		895DA19125530DFD00245209 /* ActionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewCell.swift; sourceTree = "<group>"; };
 		895DA19225530DFD00245209 /* ActionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionViewCell.xib; sourceTree = "<group>"; };
@@ -139,6 +147,24 @@
 			path = Resourses;
 			sourceTree = "<group>";
 		};
+		89407E1B255567AC002C45CB /* FriendsView */ = {
+			isa = PBXGroup;
+			children = (
+				89407E1C255567EA002C45CB /* FriendListController.swift */,
+				89407E212555683B002C45CB /* FriendListCell.swift */,
+				89407E222555683B002C45CB /* FriendListCell.xib */,
+			);
+			path = FriendsView;
+			sourceTree = "<group>";
+		};
+		89407E2B2555B190002C45CB /* FriendPage */ = {
+			isa = PBXGroup;
+			children = (
+				89407E2C2555B1C9002C45CB /* FriendPageController.swift */,
+			);
+			path = FriendPage;
+			sourceTree = "<group>";
+		};
 		898BB727254C715F00238C49 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +188,8 @@
 		898BB732254C715F00238C49 /* VK_Project */ = {
 			isa = PBXGroup;
 			children = (
+				89407E2B2555B190002C45CB /* FriendPage */,
+				89407E1B255567AC002C45CB /* FriendsView */,
 				8901EA66255462240091F717 /* Resourses */,
 				8901EA65255461FA0091F717 /* App */,
 				8901EA64255461920091F717 /* PersonalPage */,
@@ -293,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89407E242555683B002C45CB /* FriendListCell.xib in Resources */,
 				898BB780254C743600238C49 /* MainStoryboard.storyboard in Resources */,
 				898BB743254C716000238C49 /* LaunchScreen.storyboard in Resources */,
 				898BB740254C716000238C49 /* Assets.xcassets in Resources */,
@@ -329,6 +358,9 @@
 				898BB734254C715F00238C49 /* AppDelegate.swift in Sources */,
 				898BB73E254C715F00238C49 /* VK_Project.xcdatamodeld in Sources */,
 				89D2657D25548D6D00532097 /* FriendsCollectionModel.swift in Sources */,
+				89407E1D255567EA002C45CB /* FriendListController.swift in Sources */,
+				89407E2D2555B1C9002C45CB /* FriendPageController.swift in Sources */,
+				89407E232555683B002C45CB /* FriendListCell.swift in Sources */,
 				89266EDF2552F8B10038BD52 /* PersonalDataTableViewCell.swift in Sources */,
 				8911DF40254ED5CB00CFBD76 /* ViewController.swift in Sources */,
 				898BB736254C715F00238C49 /* SceneDelegate.swift in Sources */,

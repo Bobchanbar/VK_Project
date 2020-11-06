@@ -10,4 +10,5 @@ import Foundation
 struct FriendsCollectionModel: Codable {
     var name: String
     var imageName: String
+    var city: String
 }

@@ -27,14 +27,14 @@ class FakeAPI {
     }
     func getFriendsList() -> [FriendsCollectionModel] {
         let friends = [
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto"),
-            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto")
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow"),
+            FriendsCollectionModel (name: "Kirill", imageName: "kirillPhoto", city: "Moscow")
         ]
         return friends
     }

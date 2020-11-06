@@ -266,6 +266,9 @@
                                 <state key="normal" title="FRIENDS ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wJN-QT-rif" kind="show" id="1lG-R6-GAn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lBL-XM-KKx"/>
@@ -322,6 +325,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OO7-Lw-Ad9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1695.6521739130435" y="72.554347826086968"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="gbT-nV-lko">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="wJN-QT-rif" customClass="FriendListController" customModule="VK_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vxI-Vh-aj9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ufb-7c-cI4">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ufb-7c-cI4" id="Xaq-Ji-hOU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wJN-QT-rif" id="FLW-pH-Gd5"/>
+                            <outlet property="delegate" destination="wJN-QT-rif" id="meL-Fd-w6M"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Friends" id="hPS-FZ-78O"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IT3-XJ-eHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2445" y="73"/>
         </scene>
     </scenes>
     <resources>
