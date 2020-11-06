@@ -186,6 +186,14 @@ extension PersonalDataViewController: UICollectionViewDelegate, UICollectionView
             fatalError()
         }
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView === self.friendsCollectionView {
+            collectionView.deselectItem(at: indexPath, animated: true)
+            let VC = FriendPageController ()
+            VC.friend = friends [indexPath.row]
+            navigationController?.pushViewController(VC, animated: true)
+        }
+        
+    }
 }
 
